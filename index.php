@@ -25,8 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-
+    
     <title>Café Crud</title>
 
     <!-- Bootstrap core CSS -->
@@ -40,14 +39,11 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <a class="navbar-brand" href="#">Café Crud</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-2">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">          
+          <ul class="navbar-nav">            
             <li class="nav-item">
               <a class="nav-link" href="login.php">Login</a>
             </li>
@@ -55,9 +51,11 @@
               <a class="nav-link" href="register.php">Register</a>
             </li>
           </ul>
-        </div>
+          </div>        
       </nav>
     </header>
+
+    
 
     <main role="main">
 
@@ -69,16 +67,16 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+            <img class="first-slide" src="img/cake.jpg" alt="First slide">
             <div class="container">
               <div class="carousel-caption text-left">
                 <h1>Café Crud</h1>
-                <p>Serving the best Buttercake on Planet Earth.</p>
+                <p>Serving the best Cakes on Planet Earth.</p>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide" src="img/lokal.jpg" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Café Crud</h1>
@@ -87,7 +85,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide" src="img/cafe.jpg" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
                 <h1>Café Crud</h1>
@@ -111,26 +109,20 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing">
-
-        <!-- Three columns of text below the carousel -->
+      <div class="container p-2" id="reservation">
+        <h2 class="text-center">Table Reservation</h2>
+        <hr>
         <div class="row">
-          <div class="col-lg-6">
-            
-            <h2>Table Reservation</h2>
+          <div class="col-lg-8">
             <p>Currently free tables:</p>
-            <h1>We have <?php echo $data["free tables"]; ?> free Tables!</h1>
-            
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-6">
-            <img class="float-right" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            
-          </div><!-- /.col-lg-6 -->
+            <span class="p-3">We have <?php echo $data["free tables"]; ?> free tables!</span> 
+            <p class="mt-5">Contact:<br><br>+43/650/5566325<br>Samson Street 7<br>16524 Brooklyn</p>           
+          </div>
+          <div class="col-lg-4">
+            <img class="float-right ml-3" src="img/karte.jpg" alt="Generic placeholder image" width="" height="">            
+          </div>
    
         </div><!-- /.row -->
-
-
-
       </div><!-- /.container -->
 
 
@@ -148,5 +140,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+  
   </body>
 </html>

@@ -102,16 +102,22 @@
 
 
 
-<form id="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+<form class="form-signin" id="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
+
+  <img class="mb-4" src="img/smiley.jpg" alt="" width="72" height="72">
+
+  <h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
 <?php
+
    if ( isset($errMSG) ) {
+
 echo $errMSG; ?>
                 <?php
    }
    ?>
 
-    <div class="form-group">
+    
       <label for="usr">Email:</label>
       <input type="email" name="email" class="form-control" id="usr" value="<?php echo $email; ?>" maxlength="40"/>
       <span class="text-danger"><?php echo $emailError; ?></span>

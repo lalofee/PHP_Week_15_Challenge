@@ -5,8 +5,12 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  background-color: #FAEBD7;
 }
+
+/*div {
+  border: 1px solid black;
+}*/
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -40,17 +44,16 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+#reservation {
   margin-bottom: 1.5rem;
-  text-align: center;
+  background-color:  #f7ddbb;
+  border: 2px dotted grey;
 }
-.marketing h2 {
+#reservation span {
   font-weight: 400;
+  background-color: white;
 }
-.marketing .col-lg-4 p {
-  margin-right: .75rem;
-  margin-left: .75rem;
-}
+
 
 
 

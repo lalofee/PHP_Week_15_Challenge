@@ -1,14 +1,33 @@
-
 <?php
  ob_start();
  session_start();
+
  require_once 'actions/db_connect.php';
 
+ // if session is not set this will redirect to login page
+ if( !isset($_SESSION['user']) ) {
+  header("Location: index.php");
+  exit;
+ }
 
-$res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['user']);
+ // select logged-in users detail
+ $res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['user']);
+ $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
+?>
 
-$userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
+<?php
+$servername = "localhost";
+$username   = "root";
+$password   = ""; 
+$dbname     = "crud_cafe";
 
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error() . "\n");
+}
 ?>
 
 <!doctype html>
@@ -52,7 +71,7 @@ $userRow = mysqli_fetch_array($res, MYSQLI_ASSOC);
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="logout.php">Logout</a>
+              <a class="nav-link" href="logout.php?logout">Logout</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="register.php">Register</a>
