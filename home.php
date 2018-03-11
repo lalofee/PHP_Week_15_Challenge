@@ -5,30 +5,17 @@
  require_once 'actions/db_connect.php';
 
  // if session is not set this will redirect to login page
- if( !isset($_SESSION['user']) ) {
-  header("Location: index.php");
-  exit;
- }
+ // if( !isset($_SESSION['user']) ) {
+ //  header("Location: index.php");
+ //  exit;
+ // }
 
  // select logged-in users detail
- $res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['user']);
+ $res=mysqli_query($conn, "SELECT * FROM users WHERE userId=".$_SESSION['users']);
  $userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
 ?>
 
-<?php
-$servername = "localhost";
-$username   = "root";
-$password   = ""; 
-$dbname     = "crud_cafe";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error() . "\n");
-}
-?>
 
 <!doctype html>
 <html lang="en">
